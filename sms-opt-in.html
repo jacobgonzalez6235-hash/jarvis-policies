@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jarvis Assistant SMS Opt-In</title>
+<style>
+  body { font-family: -apple-system, Helvetica, Arial, sans-serif; max-width: 560px; margin: 40px auto; padding: 0 16px; color: #1a1a1a; line-height: 1.5; }
+  label { display: block; margin-top: 16px; font-weight: 600; }
+  input[type="tel"] { width: 100%; padding: 10px; font-size: 16px; margin-top: 6px; box-sizing: border-box; }
+  .consent { display: flex; gap: 10px; align-items: flex-start; margin-top: 20px; font-weight: normal; }
+  .consent input { margin-top: 5px; }
+  button { margin-top: 20px; padding: 10px 20px; font-size: 16px; }
+  .note { margin-top: 24px; font-size: 14px; color: #555; }
+</style>
+</head>
+<body>
+<h1>Jarvis Assistant SMS Notifications</h1>
+<p><strong>Jarvis Assistant</strong> is a personal AI assistant application operated by Jacob Gonzalez (Sole Proprietor). Its owner uses this form to enroll his own mobile number to receive text messages from the application.</p>
+
+<form id="optin" onsubmit="document.getElementById('done').hidden = false; return false;">
+  <label for="phone">Mobile phone number</label>
+  <input type="tel" id="phone" name="phone" placeholder="(555) 555-5555" required>
+
+  <label class="consent">
+    <input type="checkbox" id="consent" name="consent" required>
+    <span>I agree to receive automated text messages from Jarvis Assistant at the number above: appointment reminders, calendar and schedule notifications, and status alerts (such as trading price alerts). Message frequency varies. Message and data rates may apply. Reply STOP to opt out at any time; reply HELP for help. Consent is not a condition of any purchase. See the <a href="terms.html">Terms and Conditions</a> and <a href="privacy-policy.html">Privacy Policy</a>.</span>
+  </label>
+
+  <button type="submit">Enroll</button>
+  <p id="done" hidden>Enrolled. A confirmation text will follow.</p>
+</form>
+
+<p class="note">The consent box is unchecked by default and must be checked to enroll. We do not sell or share your SMS opt-in data or personal information with third parties for marketing purposes. Contact: jacob.gonzalez6235@icloud.com</p>
+</body>
+</html>
